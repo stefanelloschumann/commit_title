@@ -1,6 +1,17 @@
 {
-  "name": "Extrair título do commit",
-  "description": "",
-  "version": "1.0",
-  "manifest_version": 3
+    "name": "Extrair commit e branch",
+    "description": "Extrair de uma página de tarefa do Redmine, o título do Commit e o nome da Branch",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "http://redmine.schumann.com.br:81/redmine/issues/*",
+                "http://192.168.1.27:81/redmine/issues/*"
+            ],
+            "js": [
+                "title.js"
+            ]
+        }
+    ]
 }
