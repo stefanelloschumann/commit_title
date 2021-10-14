@@ -10,7 +10,10 @@ for (var i = 0; i < content.children.length; i++) {
             commit.textContent = 'Commit: Kanban Correções - #' + content.children[i].textContent.substring(10)
         } else if (content.children[i].textContent.includes('Defeito')) {
             branch.textContent = 'Branch: kanbancorrecoes/hotfix/#' + content.children[i].textContent.substring(9)
-            commit.textContent = 'Commit: Kanban Correções - #' +  + content.children[i].textContent.substring(9)
+            commit.textContent = 'Commit: Kanban Correções - #' + content.children[i].textContent.substring(9)
+        } else if (content.children[i].textContent.includes('Nova Implementação')) {
+            branch.textContent = 'Branch: kanbancorrecoes/feat/#' + content.children[i].textContent.substring(20)
+            commit.textContent = 'Commit: Kanban Correções - #' + content.children[i].textContent.substring(20)
         }
         content.insertBefore(commit, content.children[i])
         content.insertBefore(branch, content.children[i])
