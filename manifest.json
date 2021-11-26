@@ -1,7 +1,7 @@
 {
-    "name": "Extrair commit e branch",
-    "description": "Extrair de uma página de tarefa do Redmine, o título do Commit e o nome da Branch",
-    "version": "1.0",
+    "name": "Redmine Schumann",
+    "description": "Ferramenta criada para auxiliar desenvolvedores do Grupo Schumann à executar algumas tarefas do workflow de desenvolvimento",
+    "version": "4.35",
     "manifest_version": 3,
     "content_scripts": [
         {
@@ -10,7 +10,8 @@
                 "http://192.168.1.27:81/redmine/issues/*"
             ],
             "js": [
-                "title.js"
+                "task.js",
+                "branch.js"
             ]
         }
     ]
