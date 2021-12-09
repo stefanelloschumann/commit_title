@@ -1,8 +1,9 @@
 {
     "name": "Redmine Schumann",
     "description": "Ferramenta criada para auxiliar desenvolvedores do Grupo Schumann à executar algumas tarefas do workflow de desenvolvimento",
-    "version": "4.35",
+    "version": "5.35",
     "manifest_version": 3,
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": [
@@ -10,8 +11,10 @@
                 "http://192.168.1.27:81/redmine/issues/*"
             ],
             "js": [
-                "task.js",
-                "branch.js"
+                "branch.js",
+                "jquery-3.6.0.js",
+                "jquery-ui.js",
+                "task.js"
             ]
         }
     ]
