@@ -1,0 +1,75 @@
+{
+  "timeZone": "America/Sao_Paulo",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "urlFetchWhitelist": [
+    "https://google.com/"
+  ],
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Tasks",
+        "serviceId": "tasks",
+        "version": "v1"
+      }
+    ]
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/calendar",
+    "https://www.googleapis.com/auth/calendar.readonly",
+    "https://www.google.com/calendar/feeds"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Schumann",
+      "logoUrl": "https://res.cloudinary.com/programathor/image/upload/c_fit,h_200,w_200/v1541092323/rphkvkzvrpd8wmofjuzy.png",
+      "layoutProperties": {
+        "primaryColor": "#ffeb00",
+        "secondaryColor": "#009fe3"
+      },
+      "homepageTrigger": {
+        "runFunction": "getInterface"
+      },
+      "universalActions": [
+        {
+          "label": "Início",
+          "runFunction": "getInterface"
+        },
+        {
+          "label": "Reset timer",
+          "runFunction": "startFile"
+        },
+        {
+          "label": "Iniciar reunião",
+          "runFunction": "iniciarTimerReuniao"
+        },
+        {
+          "label": "Parar timer atual",
+          "runFunction": "pararTimerSimples"
+        }
+      ],
+      "openLinkUrlPrefixes": [
+        "http://redmine.schumann.com.br:81/",
+        "https://github.com/",
+        "https://schumann.movidesk.com/"
+      ]
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "getInterface"
+        }
+      ],
+      "primaryColor": "#ffeb00",
+      "secondaryColor": "#009fe3"
+    },
+    "chat": {},
+    "drive": {},
+    "calendar": {}
+  }
+}
