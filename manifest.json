@@ -1,7 +1,7 @@
 {
     "name": "Redmine Schumann",
     "description": "Ferramenta criada para auxiliar desenvolvedores do Grupo Schumann à executar algumas tarefas do workflow de desenvolvimento",
-    "version": "7.01",
+    "version": "7.11",
     "manifest_version": 3,
     "permissions": ["storage"],
     "content_scripts": [

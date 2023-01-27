@@ -9,9 +9,16 @@ head.appendChild(link);
 
 let issue = window.location.href.split(/([0-9]{4,5})/)[1]
 
+try {    
+    sprint = document.getElementsByClassName('sprint attribute')[0].childNodes[1].textContent
+} catch (error) {
+    sprint = 'undefined'
+}
+
 var iframe = document.createElement('iframe')
-iframe.src = 'https://script.google.com/macros/s/AKfycbzlJuWesu_aVz3RvsZWhIq6fL9QM5PjYzMKNQbzCyz7SutK6J9dwue2_bQL1fYtmawf/exec' + '?issue=' + issue
+iframe.src = 'https://script.google.com/macros/s/AKfycbxccH_maF4uuFQGxZJtwSF-lEDnxwGOdbGjsMbBHD6xb_469HYJxa1OPRsd2tZmW86u/exec' + '?issue=' + issue + '&sprint=' + sprint
 iframe.style = 'height: 100%; width: 100%; border: 0px'
+iframe.allow = 'clipboard-write *'
 
 var div = document.createElement('div')
 div.id = '9381ccc9bdc24623b3d58941bc67df44'
