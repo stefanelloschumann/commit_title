@@ -10,7 +10,7 @@ head.appendChild(link);
 let issue = window.location.href.split(/([0-9]{4,5})/)[1]
 
 var iframe = document.createElement('iframe')
-iframe.src = 'https://script.google.com/a/macros/schumann.com.br/s/AKfycbxFZG_kIcbjURCRoKsjVVv4gYXzYuap52XT1oOkEQDb2o7jvDUvuhlgdt1kQeeSO1XG/exec' + '?issue=' + issue
+iframe.src = 'https://script.google.com/macros/s/AKfycbzlJuWesu_aVz3RvsZWhIq6fL9QM5PjYzMKNQbzCyz7SutK6J9dwue2_bQL1fYtmawf/exec' + '?issue=' + issue
 iframe.style = 'height: 100%; width: 100%; border: 0px'
 
 var div = document.createElement('div')
